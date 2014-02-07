@@ -3,8 +3,6 @@ define(function(require) {
   var CommentBox = require('components/CommentBox');
   var D = React.DOM;
 
-
-
   React.renderComponent(
     CommentBox({}),
     document.querySelector('#example')

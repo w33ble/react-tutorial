@@ -8,5 +8,4 @@ require.config({
 });
 
 require(['app'], function(App) {
-  console.log('app, go!');
 });
