@@ -5,11 +5,12 @@ define(function(require, exports, module) {
 
   return React.createClass({
     render: function() {
+      console.log(this.props.comments);
       return (
         React.DOM.div(
           {className: 'commentBox'},
           React.DOM.h1(null, 'Comments'),
-          CommentList(),
+          CommentList({comments: this.props.comments}),
           CommentForm()
         )
       );
