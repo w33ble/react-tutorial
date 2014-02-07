@@ -1,5 +1,7 @@
 define(function(require, exports, module){
   var React = require('react');
+  var Showdown = require('showdown');
+  var converter = new Showdown.converter();
 
   return React.createClass({
     render: function() {
@@ -10,7 +12,7 @@ define(function(require, exports, module){
             className: 'commentAuthor',
             children: this.props.author
           }),
-          this.props.children
+          converter.makeHtml(this.props.children.toString())
         )
       );
     }
