@@ -5,6 +5,7 @@ define(function(require, exports, module){
 
   return React.createClass({
     render: function() {
+      var markup = converter.makeHtml(this.props.children.toString());
       return (
         React.DOM.div(
           {className: 'comment'},
@@ -12,7 +13,9 @@ define(function(require, exports, module){
             className: 'commentAuthor',
             children: this.props.author
           }),
-          converter.makeHtml(this.props.children.toString())
+          React.DOM.span({
+            dangerouslySetInnerHTML:{__html: markup}
+          })
         )
       );
     }

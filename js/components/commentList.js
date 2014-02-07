@@ -9,8 +9,8 @@ define(function(require, exports, module){
           {
             className: 'commentList'
           },
-          Comment({author:'Pete Hunt'}, 'I make the scripts'),
-          Comment({author:'w33ble'}, 'I use the scripts')
+          Comment({author:'Pete Hunt'}, 'I `make` the scripts'),
+          Comment({author:'w33ble'}, 'I *use* the scripts')
         )
       );
     }
